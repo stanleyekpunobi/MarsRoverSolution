@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="text-center m-3">
+    <h5>Route History</h5>
+
+</div>
+<div class="row">
+
+    <div class="col-md-12">
+        <table id="historytable" style="width:100%">
+            <thead>
+                <tr>
+                    <th>PlateauDimension</th>
+                    <th>RouteResult</th>
+
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
+@section Scripts
+{
+    <script src="@Url.Content("~/js/history.js")"></script>
+}

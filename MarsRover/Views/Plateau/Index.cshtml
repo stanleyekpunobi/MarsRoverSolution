@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card" style="width: 30rem;">
+            <div class="card-header">
+                Plateau - Navigate Rover
+            </div>
+            <div class="card-body" style="max-height:75vh; overflow-y:scroll">
+                <form id="navigateform">
+                    @*<div class="form-group">
+                            <label for="exampleInputEmail1">Select Plateau</label>
+                            <select class="form-control">
+                                <option></option>
+                                <option>Large select</option>
+                            </select>
+                        </div>*@
+                    <div class="form-group">
+                        <label for="upperrightplateau">Plateau Coordinates (upper-right)</label>
+                        <input type="text" class="form-control" id="upperrightplateau" placeholder="5 5">
+                    </div>
+
+                    <div id="rovers">
+                        <div class="rover-row">
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label for="roverposition">Rover Start Position</label>
+                                    <input type="text" id="roverposition1" class="roverposition form-control" placeholder="1 3 N">
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label for="instructions">Instructions</label>
+                                    <input type="text" id="instructions1" class="roverinstruction form-control" placeholder="LLLMM">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button type="button" id="navigatebtn" class="btn btn-primary">Navigate</button>
+
+                    <button type="button" id="addroverbtn" class="btn btn-primary">Add Rover</button>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card" id="plateauCard" style="width: 100%;">
+            <div class="card-header">
+                Plateau
+            </div>
+            <div class="card-body">
+                <table class="table w-100" id="plateautable">
+                    <tbody class="grid-canvas">
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="mt-3">
+            <h5>Rover(s) current position on plateau is: <span class="text-success" id="result"></span></h5>
+
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <script src="@Url.Content("~/lib/html2canvas/html2canvas.min.js")"></script>
+    <script src="@Url.Content("~/lib/cloudinary-jquery/cloudinary-jquery.js")"></script>
+
+}
